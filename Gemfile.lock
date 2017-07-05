@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/aakashkulkarni/legend_view_tool
+  revision: 2a7c3fa1d6cd87fbbc3fbc7d7ce88f960ced05a8
+  specs:
+    legend_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -39,8 +45,13 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
+    autoprefixer-rails (7.1.1.3)
+      execjs
     bcrypt (3.1.11)
     bindex (0.5.0)
+    bootstrap (4.0.0.alpha6)
+      autoprefixer-rails (>= 6.0.3)
+      sass (>= 3.4.19)
     builder (3.2.3)
     byebug (9.0.6)
     coderay (1.1.1)
@@ -178,12 +189,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap (~> 4.0.0.alpha6)
   byebug
   coffee-rails (~> 4.2)
   devise (~> 4.3)
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.5)
   jquery-rails
+  legend_view_tool!
   listen (~> 3.0.5)
   pg (~> 0.18)
   pry-byebug
