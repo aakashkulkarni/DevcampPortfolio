@@ -1,9 +1,3 @@
-GIT
-  remote: https://github.com/aakashkulkarni/legend_view_tool
-  revision: 2a7c3fa1d6cd87fbbc3fbc7d7ce88f960ced05a8
-  specs:
-    legend_view_tool (0.1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -84,6 +78,7 @@ GEM
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
+    legend_view_tool (0.1.0)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -196,7 +191,7 @@ DEPENDENCIES
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.5)
   jquery-rails
-  legend_view_tool!
+  legend_view_tool (~> 0.1.0)
   listen (~> 3.0.5)
   pg (~> 0.18)
   pry-byebug
