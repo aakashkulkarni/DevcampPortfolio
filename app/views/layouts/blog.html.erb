@@ -20,20 +20,18 @@
     <!-- Start of Blog Header -->
     <div class="blog-header">
       <div class="container">
-        <h1 class="blog-title">The Bootstrap Blog</h1>
+        <h1 class="blog-title">My Blog</h1>
         <p class="lead blog-description">An example blog template built with Bootstrap.</p>
+        <%= link_to 'Write a new blog', new_blog_path if logged_in?(:site_admin) %>
       </div>
     </div>
     <!-- End of Blog Header -->
     
-    <!-- Start of Row and container elements -->
+
     <div class="container">
 
       <div class="row">
-    <!-- End of Row and container elements -->
-    
-        
-        
+              
         <%= yield %>
         
         <!-- start of sidebar -->
@@ -69,7 +67,7 @@
           </div>
         </div>
         <!-- end of sidebar -->
-        
+       </div> 
         <!-- start of footer -->
         <footer class="blog-footer">
           <p>Blog template built for <a href="https://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
@@ -79,11 +77,9 @@
         </footer>
         <!-- end of footer -->
         
-        <%= render "shared/nav", location: 'bottom' %>
-        
         <%= source_helper("blog") %>
     
-      </div>
+      
     </div>
   </body>
 </html>
