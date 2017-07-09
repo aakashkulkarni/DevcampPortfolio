@@ -1,5 +1,9 @@
-<h1>Portfolio Items</h1>
-
-<%= link_to "Create New...", new_portfolio_path if logged_in?(:admin, :customer, :etc) %>
-
-<%= render partial: 'portfolio_item', collection: @portfolio_items %>
+<div class="album text-muted">
+  <div class="container">
+    <div class="row">
+      
+      <%= render partial: 'portfolio_item', collection: @portfolio_items %>
+      
+    </div>
+  </div>
+</div>
