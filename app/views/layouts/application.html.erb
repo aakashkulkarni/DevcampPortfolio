@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     
@@ -11,18 +13,22 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     
-  <%= render "shared/nav", location: 'top' %>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
     
-  <%= login_helper %>
-    
-  <%= yield %>
+          <%= render "shared/application_nav" %>
+            
+          <%= yield %>
+          
+          <%= render "shared/application_footer" %>
+          
+          <%= source_helper("application") %>
+          
+        </div>
+      </div>
+    </div>
   
-  <%= copyright_generator %>
-    
-  <%= source_helper("application") %>
-    
   </body>
 </html>

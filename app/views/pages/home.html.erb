@@ -1,8 +1,11 @@
-<h1>Hi, <%= current_user.first_name %></h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="inner cover">
+  <h2 class="cover-heading">Welcome</h2>
+  <p class="lead">Math and physics should not be kept as a secret, instead it should be revealed to reveal.</p>
+  <p class="lead">
+    <%= link_to "About Me", about_me_path, class: "btn btn-lg btn-secondary" %>
+  </p>
+</div>
 
-<h1>Blog Posts</h1>
-<%= @posts.inspect %>
 
-<h1>Skills</h1>
-<%= @skills.inspect %>
+
+    
