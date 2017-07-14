@@ -1,26 +1,31 @@
 <div class="container portfolio-container">
   <div class="row">
     <div class="col-md-7">
-      <%= image_tag portfolio_img(@portfolio_item.thumb_image, 'main'), width: '100%' %>
+      <%= image_tag portfolio_img(@portfolio_item.main_image, 'main'), width: '100%' %>
     </div>
     
     <div class="col-md-5">
       <h1><%= @portfolio_item.title %></h1>
-
-      <hr>  
         
       <em><%= @portfolio_item.subtitle %></em>
+      
+       <hr>
       
       <p><%= @portfolio_item.body %></p>
       
       <hr>
       
-      <h3>I used these technologies:</h3>
+      <h3>Technologies:</h3>
       
       <% @portfolio_item.technologies.each do |t| %>
       <p><%= t.name %></p>
       <% end %>
       
+      <% if logged_in?(:site_admin) %>
+        <div class="">
+          <%= link_to "Edit", edit_portfolio_path(@portfolio_item), class: 'btn btn-outline-warning' %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
