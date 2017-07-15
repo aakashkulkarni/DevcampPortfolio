@@ -1,4 +1,4 @@
-class AddPositionToPortfolios < ActiveRecord::Migration[5.0]
+class AddPostitionToPortfolios < ActiveRecord::Migration[5.0]
   def change
     add_column :portfolios, :position, :integer
   end
