@@ -72,3 +72,5 @@ gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'cocoon', '~> 1.2', '>= 1.2.10'
 
 gem 'gritter', '~> 1.2'
+
+gem 'twitter', '~> 6.1'
