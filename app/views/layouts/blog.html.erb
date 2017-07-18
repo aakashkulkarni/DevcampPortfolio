@@ -13,9 +13,9 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body></body>
+  <body>
 
-  <%= render 'shared/blog_nav' %>
+    <%= render 'shared/blog_nav' %>
     <%= render 'shared/blog_masthead' %>
 
     <div class="container">
@@ -29,11 +29,10 @@
       </div>
 
       <%= render 'shared/blog_footer' %>
-      
+
       <%= alerts %>
 
       <%= source_helper("blog") %>
-      
     </div>
   </body>
 </html>
