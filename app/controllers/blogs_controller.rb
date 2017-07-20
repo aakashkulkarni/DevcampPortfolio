@@ -7,12 +7,12 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-  if logged_in?(:site_admin)
-    @blogs = Blog.recent.page(params[:page]).per(5)
-  else
-    @blogs = Blog.published.recent.page(params[:page]).per(5)
-   end
-  @page_title = "My Portfolio Blog"
+    if logged_in?(:site_admin)
+      @blogs = Blog.recent.page(params[:page]).per(5)
+    else
+      @blogs = Blog.published.recent.page(params[:page]).per(5)
+    end
+    @page_title = "My Portfolio Blog"
   end
 
   # GET /blogs/1
@@ -97,6 +97,6 @@ class BlogsController < ApplicationController
     end
     
     def set_sidebar_topics
-    @side_bar_topics = Topic.with_blogs 
-  end
+      @side_bar_topics = Topic.with_blogs
+    end
 end
