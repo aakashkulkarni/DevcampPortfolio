@@ -3,6 +3,15 @@
     <h4>About</h4>
     <p>Hi. My name is <b>Aakash Kulkarni</b> and I am 15. I love math, physics, every sport there is, and of course coding! Hope you enjoy my blog, and follow me at the links below!</p>
   </div>
+  
+    <%= source_helper("alert alert-info blog-sidebar-source") %>
+
+  <div class="sidebar-module">
+    <h4>Topics</h4>
+    <% @side_bar_topics.each do |topic| %>
+      <p><%= link_to topic.title, topic_path(topic) %></p>
+    <% end %>
+  </div>
 
   <div class="sidebar-module">
     <h4>Elsewhere</h4>

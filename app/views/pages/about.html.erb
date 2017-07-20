@@ -1,19 +1,83 @@
-<h2>About Me</h2>
+<div class="app-card-container">
+  <div class="card">
+    <h2>About Me</h2>
 
-<hr>
-
-<div class="row">
-  <div class="col-md-4">
+    <hr>
     
-    <%= image_tag "on_point.png", width: 180, alt: "profile image" %>
-    
-  </div>
-  <div class="col-md-8">
-    
-    <p>I'm Aakash, I study at Hillcrest High School. I love math, physics, coding, and every sport. With over 10 hours of videos on Math watched, you can trust me that I will give the right answer. I work hard, and daily, and the thing that keeps me going is my passion for this stuff. Thanks for visiting, though!</p><br>
-    <p>"Live like you never did, work like you always did." - <b>Aakash Kulkarni 2017</b></p>
-    
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag "AK.png", width: 180, alt: "profile image", class: "profile-img" %>
+        
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <div class="skill">
+              <h6><%= skill.title %></h6>
+              <div class="progress">
+                <div 
+                  class="progress-bar progress-bar-striped bg-warning"
+                  role="progressbar"
+                  aria-valuenow="<%= skill.percent_utilized %>"
+                  aria-valuemax="100"
+                  style="width: <%= skill.percent_utilized %>%"
+                ></div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      
+      <div class="col-md-8">
+        <p>I'm Aakash, I study at Hillcrest High School. I love math, physics, coding, and every sport. With over 10 hours of videos on Math watched, you can trust me that I will give the right answer. I work hard, and daily, and the thing that keeps me going is my passion for this stuff. Thanks for visiting, though!</p><br>
+        <p>"Live like you never did, work like you always did." - <b>Aakash Kulkarni 2017</b></p>
+        
+        <p>
+          <button 
+            class="btn btn-info"
+            type="button"
+            data-toggle="collapse"
+            data-target="#achievements"
+            aria-expanded="false"
+            aria-controls="achievements"
+          >
+            Achievements
+          </button>
+          
+          <button 
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#education"
+            aria-expanded="false"
+            aria-controls="education"
+          >
+            Education
+          </button>
+        </p>
+        
+        <p>
+          <div class="collapse" id="achievements">
+            <div class="card card-block">
+              Achievement 1
+            </div>
+            <div class="card card-block">
+              Achievement 2
+            </div>
+          </div>
+          
+          <div class="collapse" id="education">
+            <div class="card card-block">
+              School 1
+            </div>
+            <div class="card card-block">
+              School 2
+            </div>
+          </div>
+        </p>
+      </div>
+    </div>
   </div>
 </div>
+
+
 
 
