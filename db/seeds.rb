@@ -60,6 +60,14 @@ end
 
 puts "3 technologies created"
 
-User.create(email: "kashakoolsmart@gmail.com", name: "Aakash Kulkarni", roles: "site_admin", password: "smartguy123")
+User.create!(email: "kashakoolsmart@gmail.com", name: "Aakash Kulkarni", roles: "site_admin", password: "smartguy123")
 
-puts "Admin user created"
+puts "1 Admin user created"
+
+User.create!(
+  email: "test@test.com",
+  name: "Regular User",
+  password: "testguest"
+)
+
+puts "1 regular user created"
