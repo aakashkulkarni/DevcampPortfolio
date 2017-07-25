@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :topics, only: [:index, :show]
+  resources :topics, only: [:index, :show, :edit, :update, :create, :destroy, :new]
+  resources :portfolio, only: [:destroy]
 
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
   resources :portfolios, except: [:show] do
