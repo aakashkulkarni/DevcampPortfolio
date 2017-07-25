@@ -4,6 +4,9 @@
       <div class="col-sm-8 py-4">
         <h4 class="text-white">About</h4>
         <p class="text-muted">Hello. This is my portfolio. These are achievements I have completed in the past, my job positions and responsibilites and all my awards. Feel free to move around, take a peek, and have a feel of my proffestional life.</p>
+        <% if logged_in?(:site_admin) %>
+          <%= link_to "Create New", new_portfolio_path, class: "btn btn-outline-secondary" %>
+        <% end %>
       </div>
       <div class="col-sm-4 py-4">
         <h4 class="text-white">Explore</h4>
@@ -18,7 +21,7 @@
 
 <div class="navbar navbar-inverse bg-inverse">
   <div class="container d-flex justify-content-between">
-    <a href="#" class="navbar-brand">Aakash Kulkarni</a>
+    <a href="http://cts-railsdevcamp-aakashkulkarni.c9users.io:8080" class="navbar-brand">Aakash Kulkarni</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
