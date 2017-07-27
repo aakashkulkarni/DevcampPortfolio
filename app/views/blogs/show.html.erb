@@ -1,5 +1,9 @@
 <div class="col-sm-8 blog-main">
   
+  <div class="back-icon-show">
+    <%= link_to fa_icon('chevron-circle-left'), blogs_path %>
+  </div>
+  
   <nav class="breadcrumb">
     <%= link_to "Home", root_path, class: "breadcrumb-item" %>
     <%= link_to @blog.topic.title, topic_path(@blog.topic), class: "breadcrumb-item" %>
