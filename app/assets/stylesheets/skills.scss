@@ -127,6 +127,10 @@ h6, .h6 {
   font-weight: bold;
 }
 
+.card {
+  padding: 20px;
+}
+
 
 /*
  * Footer
@@ -259,21 +263,11 @@ h6, .h6 {
   margin-bottom: 10px;
 }
 
-.about-card-container {
-  color: black;
-  text-align: left;
-}
+/* Custom styles */
 
-.about-card-container a {
+.card-skills {
   color: black;
 }
-
-.about-card-container > .card {
-  padding: 40px;
-}
-
-
-
 
 
 
