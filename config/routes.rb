@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :topics, only: [:index, :show, :edit, :update, :create, :destroy, :new]
-  resources :portfolio, only: [:destroy]
+  resources :portfolios, only: [:destroy]
   resources :skills, only: [:show, :edit, :update, :create, :destroy, :new]
 
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   end
   get 'angular-items', to: 'portfolios#angular'
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
+  patch 'portfolio/:id', to: 'portfolios#update'
+  put 'portfolio/:id', to: 'portfolios#update'
 
   get 'about-me', to: 'pages#about'
   get 'contact', to: 'pages#contact'

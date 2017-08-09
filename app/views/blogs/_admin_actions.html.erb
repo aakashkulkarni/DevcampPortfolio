@@ -1,8 +1,6 @@
 <% if logged_in?(:site_admin) %>
   <nav class="breadcrumb blogcrumb">
-    <div class="contain-tip">
-      <%= link_to fa_icon('file-text'), toggle_status_blog_path(blog) %>
-    </div>
+    <%= link_to fa_icon('file-text'), toggle_status_blog_path(blog) %>
     <%= link_to fa_icon('pencil-square-o'), edit_blog_path(blog) %>
     <%= link_to fa_icon('trash'), blog, method: :delete, data: { confirm: 'Are you sure?' } %>
   </nav>
