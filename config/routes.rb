@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   resources :topics, only: [:index, :show, :edit, :update, :create, :destroy, :new]
   resources :portfolios, only: [:destroy]
   resources :skills, only: [:show, :edit, :update, :create, :destroy, :new]
