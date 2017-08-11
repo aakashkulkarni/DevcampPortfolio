@@ -3,6 +3,10 @@
    <h1>Topics</h1>
     
     <%= render @topics %>
+    
+    <% if logged_in?(:site_admin) %>
+      <%= link_to fa_icon('plus-circle'),  new_topic_path %>
+    <% end %>
 
 </div>
 

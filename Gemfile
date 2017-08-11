@@ -79,3 +79,6 @@ gem 'redis', '~> 3.3', '>= 3.3.3'
 
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.1'
+
+gem 'hint', '~> 1.2', '>= 1.2.2'
+gem 'ckeditor', '~> 4.2', '>= 4.2.4'

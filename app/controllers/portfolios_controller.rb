@@ -57,16 +57,16 @@ class PortfoliosController < ApplicationController
     
     # Redirect
     respond_to do |format|
-      format.html { redirect_to portfolios_url, notice: 'Record was removed.' }
+      format.html { redirect_to portfolios_url, notice: 'Portfolio item was deleted.' }
     end
   end
   
   private
   
   def portfolio_params
-    params.require(:portfolio).permit(:title, 
-                                      :subtitle, 
-                                      :body, 
+    params.require(:portfolio).permit(:title,
+                                      :subtitle,
+                                      :body,
                                       :main_image,
                                       :thumb_image,
                                       technologies_attributes: [:id, :name, :_destroy]

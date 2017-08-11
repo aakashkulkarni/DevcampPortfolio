@@ -1,5 +1,6 @@
 @import "bootstrap";
-@import  "gritter";
+@import "font-awesome";
+@import "gritter";
 
 /*
  * Globals
@@ -257,6 +258,62 @@ h6, .h6 {
 .skill {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.about-card-container {
+  color: black;
+  text-align: left;
+}
+
+.about-card-container a {
+  color: black;
+}
+
+.about-card-container > .card {
+  padding: 40px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    border: 1px solid gray;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: transparent;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.login {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.dropbtn {
+  color: grey;
+  font-weight: 900;
+  margin-left: 4px;
+  margin-top: 3.5px;
 }
 
 

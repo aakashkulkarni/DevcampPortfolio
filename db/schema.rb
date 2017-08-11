@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170716205235) do
+ActiveRecord::Schema.define(version: 20170809171558) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,10 +21,22 @@ ActiveRecord::Schema.define(version: 20170716205235) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.string   "slug"
-    t.integer  "status",     default: 0
     t.integer  "topic_id"
+    t.integer  "status",     default: 0
     t.index ["slug"], name: "index_blogs_on_slug", unique: true, using: :btree
     t.index ["topic_id"], name: "index_blogs_on_topic_id", using: :btree
+  end
+
+  create_table "ckeditor_assets", force: :cascade do |t|
+    t.string   "data_file_name",               null: false
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.string   "type",              limit: 30
+    t.integer  "width"
+    t.integer  "height"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.index ["type"], name: "index_ckeditor_assets_on_type", using: :btree
   end
 
   create_table "comments", force: :cascade do |t|
@@ -35,6 +47,13 @@ ActiveRecord::Schema.define(version: 20170716205235) do
     t.datetime "updated_at", null: false
     t.index ["blog_id"], name: "index_comments_on_blog_id", using: :btree
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
+  end
+
+  create_table "dev_news", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -66,6 +85,7 @@ ActiveRecord::Schema.define(version: 20170716205235) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.text     "badge"
+    t.text     "details"
   end
 
   create_table "technologies", force: :cascade do |t|

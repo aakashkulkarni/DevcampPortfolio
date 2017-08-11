@@ -1,7 +1,23 @@
 <% if logged_in?(:site_admin) %>
   <nav class="breadcrumb blogcrumb">
-    <%= link_to fa_icon('file-text'), toggle_status_blog_path(blog), style: blog_status_color(blog) %>
-    <%= link_to fa_icon('pencil-square-o'), edit_blog_path(blog) %>
+    <a 
+      href="<%= toggle_status_blog_path(blog) %>", 
+      class="hint--top hint--info", 
+      data-hint="
+        <% if blog.draft? %>
+          <%= "Draft" %>
+        <% else %>
+          <%= "Published" %>
+        <% end %>">
+      <i class="fa fa-file-text" aria-hidden="true"></i>
+    </a>
+    <a
+      href="<%= edit_blog_path(blog) %>"
+      class="hint--top hint--info"
+      data-hint="Edit">
+      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+    </a>
     <%= link_to fa_icon('trash'), blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+    
   </nav>
 <% end %> 

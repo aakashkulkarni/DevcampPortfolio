@@ -18,5 +18,7 @@
 //= require cocoon
 //= require gritter
 //= require cable
+//= require bootstrap
+//= require ckeditor/init
 //= require turbolinks
 //= require_tree .

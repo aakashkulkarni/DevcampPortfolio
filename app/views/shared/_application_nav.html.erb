@@ -3,7 +3,13 @@
     <h3 class="masthead-brand">Aakash Kulkarni</h3>
     <nav class="nav nav-masthead app-nav">
       <%= nav_helper 'nav-link', 'span' %>
-      <%= login_helper 'nav-link' %>
+      <div class="dropdown">
+        <p class="dropbtn"><%= fa_icon('user-o') %></a>
+        <div class="dropdown-content">
+          <%= login_helper 'login' %>
+          <%= link_to 'Profile', edit_user_registration_path %>
+        </div>
+      </div>
     </nav>
   </div>
 </div>

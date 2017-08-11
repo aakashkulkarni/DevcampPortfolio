@@ -1,0 +1,19 @@
+<div class="card-skills">
+  <div class="card">
+    <h1><%= @skill.title %></h1>
+    <br>
+    <div class="progress">
+      <div 
+        class="progress-bar progress-bar-striped progress-bar-animated"
+        role="progressbar"
+        aria-valuenow="<%= @skill.percent_utilized %>"
+        aria-valuemax="100"
+        style="width: <%= @skill.percent_utilized %>%"
+      ></div>
+    </div>
+    <br>
+    <p><%= markdown @skill.details %></p>
+    <%= button_to "Delete Skill", @skill, :method => :delete, data: { confirm: "Are you sure you want to delete this skill?"}, class: 'btn btn-outline-danger' if logged_in?(:site_admin) %><br>
+    <%= link_to "Edit Skill", edit_skill_path, class: 'btn btn-outline-primary', style: "margin: auto;" if logged_in?(:site_admin) %>
+  </div>
+</div>
