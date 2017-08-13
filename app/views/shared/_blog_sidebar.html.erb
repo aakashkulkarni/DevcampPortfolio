@@ -7,7 +7,7 @@
     <%= source_helper("alert alert-info blog-sidebar-source") %>
 
   <div class="sidebar-module">
-    <h4><%= link_to "Topics", topics_path, class: "topic-index" %></h4>
+    <h4><%= link_to "Topics", topics_path, class: "badge badge-default" %></h4>
     <% @side_bar_topics.each do |topic| %>
       <p><%= link_to topic.title, topic_path(topic) %></p>
     <% end %>
